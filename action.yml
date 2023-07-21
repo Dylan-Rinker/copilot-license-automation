@@ -1,11 +1,13 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Copilot License Automation'
+description: 'A GitHub action to automate the licensing of Copilot'
+author: 'Dylan Rinker'
 inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  daysToDeallocate:
+    required: false
+    description: 'The number of inactive days which will trigger the deallocation of the Copilot license'
+  organization:
+    required: false
+    description: 'The organization where the Copilot license is allocated'
 runs:
   using: 'node16'
   main: 'dist/index.js'
